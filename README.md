@@ -1,9 +1,30 @@
-# EDMW_2021_python_code
-Python notebooks for the EDMW 2021 Satellite Data Training Workshop
+# python_code 
 
-## Setup and test your python environment: 
+## Viewing the exercises
+The exercises are a series of Jupyter Notebooks that are hosted on a GitHub repository. You can view a single exercise to see if it is of interest by 
+clicking the linked name of each exercise in the **Exercises** section below. A non-executable version of the exercise will open in a new browser window.   
 
-Download this repo and then use a command window to navigate to the repo folder on your computer. Then enter the following commands. This uses the supplied yml file to create a new environment named 'coastwatch' and load the required modules to it. Then it activates the environment runs a script that checks for any missing modules and loads jupyter-lab for displaying the jupyter notebook tutorials.
+<!--If you want an executable version of a single Notebook, you can save a Notebook to your computer using the save menu in your browser while viewing the file online. To get all of the Notebooks, you can go to the GitHub repository and download a zip file with all of the exercises included. To download the repo and run the Notebooks on your computer:
+* Go to the GitHub repo page that lists all the files and folders in the python_code repo
+* From the green "Code" dropdown, select "Download Zip"
+* Unzip to a location on your computer
+* In a terminal, navigate to the unzipped folder and launch Jupyter Notebook by entering:
+```
+jupyter notebook 
+```
+-->
+## Running the exercises
+### Setup and test your python environment: 
+
+1. Make sure you have conda installed on your machine
+2. Download this repo | From the green "Code" dropdown, select "Download Zip" and unzip to a location on your computer
+3. Use a terminal window to navigate to the unzipped folder 
+
+The following commands will:
+* Create a new conda environment named 'coastwatch' and load the required modules to it
+* Activate the environment
+* Runs a script that checks for any missing modules 
+* Launches jupyter-lab for displaying the jupyter notebook tutorials
 
 ```
 conda env create -f environment.yml
@@ -11,3 +32,17 @@ conda activate coastwatch
 python check_modules.py
 jupyter-lab
 ```
+
+## Exercises
+The first three exercises demonstrate the CoastWatch R code tutorials as python code. They show you how to extract gridded data from ERDDAP inside a box or polygon, and along a track. Additional examples demonstrate practical applications of working with time-series of satellite data.
+1. **[Get Data Using a Rectangular Bounding Box](1_extract_box_edmw.ipynb)**  
+Demonstrates how to extract environmental data from an ERDDAP server in an rectangular bounding box (polygon) over time.
+2. **[Get Data Along a Track](2_extract_at_ship_stations_edmw.ipynb)**  
+Extract environmental data from an ERDDAP server along an x,y and time trajectory, e.g. an animal or cruise track.
+3. **[Get Data Using an Irregular Shape](3_extract_from_irregular_boundary_edmw.ipynb)**  
+Extract environmental data from an ERDDAP server in an irregular bounding box (polygon) over time, e.g. a marine protected area. 
+4. **[Comparing time-series of different satellite datasets](4_compare_sensor_data_edmw.ipynb)**
+Several satellite ocean color sensors have been launched since 1997 to provide a continuous record of global ocean color data. This exercise examines the variability of Chlorophyll-a values during time periods where the satellite measurements overlap. 
+5. **[Creating a virtual buoy data](5_virtual_buoy_edmw.ipynb)**   
+Create a virtual buoy from satellite data for locations where in-situ buoy data may not be available or has been discontinued.  
+
